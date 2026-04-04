@@ -2,7 +2,7 @@ import os
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 
-TOKEN = os.environ.get("TELEGRAM_TOKEN")
+TOKEN = "8689052345:AAGeC4DFdfsZr91J5a5B0kMGXa2vctQowqA"   # 🔴 replace this
 
 user_state = {}
 
