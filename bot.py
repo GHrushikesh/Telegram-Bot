@@ -3,9 +3,17 @@ import time
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 
-# ✅ Use ENV variable (Render safe)
-TOKEN = os.environ.get("BOT_TOKEN")
+# Load .env file if present (for local development)
+if os.path.exists(".env"):
+    with open(".env") as f:
+        for line in f:
+            line = line.strip()
+            if line and not line.startswith("#") and "=" in line:
+                k, v = line.split("=", 1)
+                os.environ.setdefault(k.strip(), v.strip())
 
+# ✅ Use ENV variable (Render safe)
+TOKEN = os.environ.get("BOT_TOKEN") or os.environ.get("TELEGRAM_TOKEN")
 user_state = {}
 
 # ===== START MENU =====

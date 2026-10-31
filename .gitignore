@@ -1,5 +1,7 @@
+venv/
 venv310/
 downloads/
+.env
 __pycache__/
 *.pyc
 .DS_Store
