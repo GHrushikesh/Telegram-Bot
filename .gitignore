@@ -5,3 +5,6 @@ downloads/
 __pycache__/
 *.pyc
 .DS_Store
+Hg.TelegramBot-clean/
+Hg.TelegramBot.git/
+.git_bloated_backup/
